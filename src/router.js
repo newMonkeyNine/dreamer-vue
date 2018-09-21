@@ -2,12 +2,22 @@
  * Created by superman on 2016/12/2.
  */
 import App from  './App.vue'
+import Router from 'vue-router'
+import Vue from 'vue'
+import Login from './login.vue'
+import Regist from './regist.vue'
 
+Vue.use(Router)
 export default [
   {
     path: '/',
-    component: App.components.Movies,
-    name: 'index'
+    component: Login,
+    name: 'Login'
+  },
+  {
+    path: '/regist',
+    component: Regist,
+    name: 'Regist'
   },
   {
     path: '/vuex-demo',

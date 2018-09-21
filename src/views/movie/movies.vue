@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <v-header></v-header>
+    </div>
     <section class="grid has-search-bar">
       <div v-if="inTheater.title">
         <h2>{{inTheater.title}}
@@ -49,9 +52,10 @@
   import {mapState} from 'vuex';
   import * as types from '../../store/types';
   import {API_TYPE, fetchMoviesByType} from '../../store/api';
+  import vHeader from '../../components/header.vue'
 
   export default{
-    components: {Spinner},
+    components: {vHeader,Spinner},
     data(){
       return {
         loading: true,

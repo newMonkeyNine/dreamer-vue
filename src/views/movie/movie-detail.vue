@@ -27,7 +27,7 @@
   </div>
 </template>
 <script>
-  import Spinner  from '../../components/Spinner.vue'
+  import Spinner  from '../../components/Spinner.vue';
   import * as types from '../../store/types';
   import {fetchMovieById} from '../../store/api';
 

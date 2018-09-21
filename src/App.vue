@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-header></v-header>
+    <!-- <v-header></v-header> -->
     <router-view></router-view>
   </div>
 </template>
@@ -12,11 +12,11 @@
   import MovieList from './views/movie/movie-list.vue'
   import MovieDetail from './views/movie/movie-detail.vue'
   import SearchList from './views/movie/search-list.vue'
+  
 
   export default {
     name: 'app',
     components: {
-      vHeader,
       Hello,
       Movies,
       MovieList,

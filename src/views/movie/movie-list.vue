@@ -1,4 +1,8 @@
 <template>
+  <div>
+    <div>
+      <v-header></v-header>
+    </div>
   <section class="grid has-search-bar" v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10" >
     <h2>{{movieList.title}}</h2>
     <div class="card" v-if="movieList.subjects.length > 0">
@@ -16,16 +20,18 @@
     </div>
     <spinner :show="loading"></spinner>
   </section>
+  </div>
 </template>
 
 <script>
   import Spinner from '../../components/Spinner.vue';
-  import InfiniteScroll from 'vue-infinite-scroll'
+  import vHeader from '../../components/header.vue';
+  import InfiniteScroll from 'vue-infinite-scroll';
   import * as types from '../../store/types';
   import {API_TYPE, fetchMoviesByType} from '../../store/api';
 
   export default{
-    components: {Spinner},
+    components: {vHeader, Spinner},
     directives: {InfiniteScroll},
     data(){
       return {
